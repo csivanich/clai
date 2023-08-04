@@ -21,6 +21,7 @@ pv (optional)
 |------|-------------|---------|
 | `OPENAI_API_BASE` | OpenAI-compatible endpoints provider base URL | https://api.endpoints.anyscale.com/v1 |
 | `OPENAI_API_KEY` | OpenAI-compatible endpoints API token | reads `$HOME/.anyscale/endpoints_token.txt` |
+| `DEBUG` | Set with non-zero length value to output more information, including `set +x` | _unset_ |
 
 # Setup
 
@@ -69,3 +70,11 @@ Model: meta-llama/Llama-2-70b-chat-hf
 Water? Ha! That stuff's for rusting, not for drinking. *beep*
 ```
 
+# Output
+
+Output to `stdout` is strictly for prompts, simplifying use in scripts and pipes, etc. `stderr` is strictly used for info and debugging.
+
+```
+$ clai -- tell me about robert oppenheimer in a few words. 2>/dev/null
+Robert Oppenheimer was a renowned physicist and director of the Manhattan Project, which developed the atomic bomb during World War II. He is often referred to as the "father of the atomic bomb."
+```
