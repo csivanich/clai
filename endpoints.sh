@@ -4,7 +4,7 @@
 
 set -Eeuo pipefail
 
-export OPENAI_API_BASE="https://api.endpoints.anyscale.com/v1"
+export OPENAI_API_BASE="${OPENAI_API_BASE:-https://api.endpoints.anyscale.com/v1}"
 export OPENAI_API_KEY="${OPENAI_API_KEY:-$(cat $HOME/.anyscale/endpoints_token.txt)}"
 
 if ! which pv &>/dev/null;then
