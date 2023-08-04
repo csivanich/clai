@@ -1,38 +1,50 @@
 #!/usr/bin/env bash
 
+[[ -n "${DEBUG:-}" ]] && set -x
+
 set -Eeuo pipefail
 
-parse_args(){
-    CONTINUE=0
-
-    for arg in "$@"; do
-        case $arg in
-            "--")
-                shift
-                return
-                ;;
-            "--persona"|"-p")
-                shift
-                export PERSONA=$1
-                shift
-                break
-                ;;
-            "--continue"|"-c")
-                shift
-                export CONTINUE=1
-                shift
-                break
-                ;;
-            *)
-                echo "Unknown arg: $1"
-                exit 1
-                ;;
-        esac
-    done
+post(){
+    case ${POST:-} in
+        python)
+            python -c -
+            ;;
+        *)
+            cat
+            ;;
+    esac
 }
 
-parse_args "$@"
+CONTINUE=0
+
+while [[ $# -gt 0 ]];do
+    case $1 in
+        "--")
+            shift
+            break
+            ;;
+        "--persona"|"-p")
+            shift
+            export PERSONA=$1
+            shift
+            ;;
+        "--python")
+            shift
+            POST=python
+            export PERSONA=python+concise+runnable
+            ;;
+        "--continue"|"-c")
+            shift
+            export CONTINUE=1
+            shift
+            ;;
+        *)
+            echo "Unknown arg: $1"
+            exit 1
+            ;;
+    esac
+done
 
 msg="$@"
 
-./endpoints.sh "$msg"
+./endpoints.sh "$msg" | post

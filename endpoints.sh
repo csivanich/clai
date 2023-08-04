@@ -53,6 +53,7 @@ present(){
 
 persona(){
     PERSONAS="$(tr '+' ' ' <<< ${PERSONA:-default})"
+    echo "Personas: $PERSONAS" >&2
     (
         for p in ${PERSONAS};do
             cat persona/$p
