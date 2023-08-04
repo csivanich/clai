@@ -17,9 +17,10 @@ pv (optional)
 
 ## Environment
 
-`OPENAI_API_BASE` OpenAI-compatible endpoints provider base URL
-
-`OPENAI_API_KEY` OpenAI-compatible endpoints API token
+| Name | Description | Default |
+|------|-------------|---------|
+| `OPENAI_API_BASE` | OpenAI-compatible endpoints provider base URL | https://api.endpoints.anyscale.com/v1 |
+| `OPENAI_API_KEY` | OpenAI-compatible endpoints API token | reads `$HOME/.anyscale/endpoints_token.txt` |
 
 # Setup
 
