@@ -4,7 +4,42 @@ clai (pronounced `/ˈkleɪ/` like 'clay') is a CLI for AI endpoints designed to 
 
 It is designed to be compatible with various AI Endpoints providers like OpenAI and Anyscale.
 
-It provides a simple means of querying different "personas" to create curated results depending on desired response. Personas can be composed by combining them with `+`
+# Requirements
+
+## Binaries
+
+```
+bash
+curl
+jq
+pv (optional)
+```
+
+## Environment
+
+`OPENAI_API_BASE` OpenAI-compatible endpoints provider base URL
+
+`OPENAI_API_KEY` OpenAI-compatible endpoints API token
+
+# Setup
+
+Clone the repo.
+
+# Run
+
+Run with `./clai <args>`
+
+Can also build and run from a Docker image with `./clai_docker.sh`
+
+# Personas
+
+Personas provide a simple means of creating curated results depending on desired response.
+
+Personas are simply plaintext prompts located at `persona/*`
+
+Personas can be composed by combining them with `+`
+
+## Examples
 
 default:
 ```
