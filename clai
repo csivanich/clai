@@ -4,6 +4,8 @@
 
 set -Eeuo pipefail
 
+VERSION="0.0.1a"
+
 usage(){
     echo "USAGE: $0 [-<h|-help>] [-<p|-persona> <NAME[+NAME]...>] [-<m|-model> <MODEL>] [--python] [-<c|-continue>] -- <prompt>"
 }
