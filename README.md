@@ -74,7 +74,7 @@ According to the International Organization of Motor Vehicle Manufacturers (OICA
 
 Hooray :tada:
 
-# :clown: Personas
+# :black_joker: Personas
 
 Personas provide a simple means of creating curated results depending on desired response.
 
