@@ -1,0 +1,24 @@
+#!/usr/bin/env
+
+TMP_DIR="/tmp"
+FILE="${TMP_DIR}/clai_output.md"
+
+tee "$FILE"
+
+# Determine the operating system
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+ # Linux
+ xdg-open "$FILE"
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+ # macOS
+ open "$FILE"
+elif [[ "$OSTYPE" == "cygwin" ]]; then
+ # Windows
+ start "$FILE"
+else
+ echo "Unsupported operating system"
+ rc=1
+fi
+rc=${rc:-$?}
+
+exit $rc

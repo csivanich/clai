@@ -7,7 +7,7 @@ set -Eeuo pipefail
 VERSION="0.0.1a"
 
 usage(){
-    echo "USAGE: $0 [-<h|-help>] [-<p|-persona> <NAME[+NAME]...>] [-<m|-model> <MODEL>] [--python] [-<c|-continue>] -- <prompt>"
+    echo "USAGE: $0 [-<h|-help>] [--post <POST>] [-<p|-persona> <NAME[+NAME]...>] [-<m|-model> <MODEL>] [--python] [-<c|-continue>] -- <prompt>"
 }
 
 if [[ $# -eq 0 ]];then
@@ -16,14 +16,7 @@ if [[ $# -eq 0 ]];then
 fi
 
 post(){
-    case ${POST:-} in
-        python)
-            python -c -
-            ;;
-        *)
-            cat
-            ;;
-    esac
+    bash "./post/${POST:-default}"
 }
 
 CONTINUE=0
@@ -37,6 +30,11 @@ while [[ $# -gt 0 ]];do
         "--")
             shift
             break
+            ;;
+        "--post")
+            shift
+            POST="$1"
+            shift
             ;;
         "--persona"|"-p")
             shift
@@ -70,6 +68,12 @@ while [[ $# -gt 0 ]];do
     esac
 done
 
-msg="$@"
+read_stdin(){
+    echo "reading from stdin..." >&2
+    local _buf=""
+    while IFS='' read _line; do
+        echo "$_line"
+    done
+}
 
-./endpoints.sh "$msg" | post
+./endpoints.sh "${@:-$(read_stdin)}" | post
