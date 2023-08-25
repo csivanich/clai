@@ -13,24 +13,30 @@ if ! which pv &>/dev/null;then
     }
 fi
 
-sanitize(){
-    sed -e 's/"/\"/g' \
-    | sed -e 's/\n/\\n/g'
+THIS_DIR="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+
+# TODO: make this relative to the script's local directory
+MODELS_DIR="${THIS_DIR}/models"
+
+json(){
+    jq -Rrs .
+}
+
+model(){
+    local _model="${MODEL:-default}"
+    echo "Model: $_model" >&2
+    cat $MODELS_DIR/$_model
 }
 
 message(){
-    local _msg=$(sanitize <<< $@)
-    local _persona=$(persona | sanitize)
-    local _model="${MODEL:-meta-llama/Llama-2-70b-chat-hf}"
-    echo "Model: $_model" >&2
-    cat <<-EOL
+    jq . <<-EOL
         {
-            "model": "$_model",
+            "model": "$(model | json)",
             "messages": [
-                {"role": "system", "content": "$_persona"},
-                {"role": "user", "content": "$_msg"}
+                {"role": "system", "content": "$(persona | json)"},
+                {"role": "user", "content": "$@"}
             ],
-            "temperature": ${TEMPERATURE:-0.0}
+            "temperature": $(json <<< ${TEMPERATURE:-0.0})
         }
 EOL
 }
@@ -43,12 +49,7 @@ query(){
     | tee $HOME/.cache/.endpoints_last.json \
     | pv - \
     | jq -r '.choices | map(.message.content) | join(" ")' \
-    | tee $HOME/.cache/.endpoints_last \
-    | present
-}
-
-present(){
-    echo -e "$(cat -)"
+    | tee $HOME/.cache/.endpoints_last
 }
 
 persona(){
