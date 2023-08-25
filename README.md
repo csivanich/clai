@@ -49,7 +49,7 @@ _This assumes `/usr/local/bin` is in `$PATH`_
 
 ```sh
 git clone https://github.com/csivanich/clai
-ln -s $(pwd/clai/clai) /usr/local/bin/clai
+ln -s $(pwd)/clai/clai /usr/local/bin/clai
 ```
 
 ## Setup your environment
