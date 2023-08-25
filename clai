@@ -35,7 +35,7 @@ while [[ $# -gt 0 ]];do
         "--markdown")
             shift
             POST=markdown
-            PERSONA=markdown
+            export PERSONA=markdown
             ;;
         "--post")
             shift
