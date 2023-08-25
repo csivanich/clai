@@ -5,13 +5,14 @@
 set -Eeuo pipefail
 
 VERSION="0.0.1a"
+THIS_DIR="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 
 usage(){
     echo "USAGE: $0 [-<h|-help>] [--post <POST>] [-<p|-persona> <NAME[+NAME]...>] [-<m|-model> <MODEL>] [--python] [--markdown] -- <prompt>"
 }
 
 post(){
-    bash "./post/${POST:-default}"
+    bash "${THIS_DIR}/post/${POST:-default}"
 }
 
 while [[ $# -gt 0 ]];do
