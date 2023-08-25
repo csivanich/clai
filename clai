@@ -7,7 +7,7 @@ set -Eeuo pipefail
 VERSION="0.0.1a"
 
 usage(){
-    echo "USAGE: $0 [-<h|-help>] [--post <POST>] [-<p|-persona> <NAME[+NAME]...>] [-<m|-model> <MODEL>] [--python] -- <prompt>"
+    echo "USAGE: $0 [-<h|-help>] [--post <POST>] [-<p|-persona> <NAME[+NAME]...>] [-<m|-model> <MODEL>] [--python] [--markdown] -- <prompt>"
 }
 
 if [[ $# -eq 0 ]];then
@@ -28,6 +28,11 @@ while [[ $# -gt 0 ]];do
         "--")
             shift
             break
+            ;;
+        "--markdown")
+            shift
+            POST=markdown
+            PERSONA=markdown
             ;;
         "--post")
             shift
