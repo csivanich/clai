@@ -28,16 +28,16 @@ pv (optional)
 ## Install any dependencies
 ```sh
 # Ubuntu
-sudo apt-get install bash curl jq pv
+sudo apt-get install curl jq pv
 
 # MacOS
-sudo brew install bash curl jq pv
+brew install jq pv
 
 # Fedora/RHEL
-sudo dnf install bash curl jq pv
+sudo dnf install curl jq pv
 
 # Arch
-sudo pacman -Syu install bash curl jq pv
+sudo pacman -Syu install curl jq pv
 
 # Alpine
 sudo apk add bash curl jq pv
