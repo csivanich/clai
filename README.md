@@ -59,7 +59,7 @@ export OPENAI_API_BASE="https://api.endpoints.anyscale.com/v1"
 export OPENAI_API_KEY="YOUR_TOKEN"
 ```
 
-## Check things are working
+# :runner: Run
 
 ```sh
 $ clai --help
@@ -73,14 +73,6 @@ According to the International Organization of Motor Vehicle Manufacturers (OICA
 ```
 
 Hooray :tada:
-
-# :runner: Run
-
-Run with `./clai <args>`
-
-See `./clai --help` for full usage.
-
-Can also build and run from a Docker image with `./clai_docker.sh`
 
 # :clown: Personas
 
