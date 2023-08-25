@@ -5,7 +5,7 @@
 set -Eeuo pipefail
 
 usage(){
-    echo "USAGE: $0 [-<h|-help>] [-<p|-persona>] <NAME[+NAME]...> [--python] [-<c|-continue>] -- <prompt>"
+    echo "USAGE: $0 [-<h|-help>] [-<p|-persona> <NAME[+NAME]...>] [-<m|-model> <MODEL>] [--python] [-<c|-continue>] -- <prompt>"
 }
 
 if [[ $# -eq 0 ]];then
@@ -49,6 +49,11 @@ while [[ $# -gt 0 ]];do
         "--continue"|"-c")
             shift
             export CONTINUE=1
+            shift
+            ;;
+        "--model"|"-m")
+            shift
+            export MODEL="$1"
             shift
             ;;
         *)

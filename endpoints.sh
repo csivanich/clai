@@ -21,7 +21,7 @@ sanitize(){
 message(){
     local _msg=$(sanitize <<< $@)
     local _persona=$(persona | sanitize)
-    local _model="meta-llama/Llama-2-70b-chat-hf"
+    local _model="${MODEL:-meta-llama/Llama-2-70b-chat-hf}"
     echo "Model: $_model" >&2
     cat <<-EOL
         {
