@@ -10,11 +10,6 @@ usage(){
     echo "USAGE: $0 [-<h|-help>] [--post <POST>] [-<p|-persona> <NAME[+NAME]...>] [-<m|-model> <MODEL>] [--python] [--markdown] -- <prompt>"
 }
 
-if [[ $# -eq 0 ]];then
-    usage
-    exit 1
-fi
-
 post(){
     bash "./post/${POST:-default}"
 }
@@ -41,7 +36,7 @@ while [[ $# -gt 0 ]];do
             ;;
         "--persona"|"-p")
             shift
-            export PERSONA=$1
+            export PERSONA="$1"
             shift
             ;;
         "--python")
