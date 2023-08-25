@@ -7,7 +7,7 @@ set -Eeuo pipefail
 VERSION="0.0.1a"
 
 usage(){
-    echo "USAGE: $0 [-<h|-help>] [--post <POST>] [-<p|-persona> <NAME[+NAME]...>] [-<m|-model> <MODEL>] [--python] [-<c|-continue>] -- <prompt>"
+    echo "USAGE: $0 [-<h|-help>] [--post <POST>] [-<p|-persona> <NAME[+NAME]...>] [-<m|-model> <MODEL>] [--python] -- <prompt>"
 }
 
 if [[ $# -eq 0 ]];then
@@ -18,8 +18,6 @@ fi
 post(){
     bash "./post/${POST:-default}"
 }
-
-CONTINUE=0
 
 while [[ $# -gt 0 ]];do
     case $1 in
@@ -45,11 +43,6 @@ while [[ $# -gt 0 ]];do
             shift
             POST=python
             export PERSONA=python+concise+runnable
-            ;;
-        "--continue"|"-c")
-            shift
-            export CONTINUE=1
-            shift
             ;;
         "--model"|"-m")
             shift
