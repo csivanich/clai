@@ -6,6 +6,7 @@ set -Eeuo pipefail
 
 VERSION="0.0.1a"
 
+# shellcheck disable=SC2155
 if [[ -z "${CLAI_DIR:-}" ]];then
     SOURCE=${BASH_SOURCE[0]}
     while [ -L "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
@@ -24,11 +25,27 @@ post(){
     bash "${CLAI_DIR}/post/${POST:-default}"
 }
 
+read_stdin(){
+    echo "reading from stdin..." >&2
+    local _buf=""
+    while IFS='' read -r _line; do
+        echo "$_line"
+    done
+}
+
+prompt(){
+    "$CLAI_DIR/endpoints.sh" "${@:-$(read_stdin)}"
+}
+
 while [[ $# -gt 0 ]];do
     case $1 in
         "--help"|"-h")
             usage
             exit 1
+            ;;
+        "--version")
+            echo "clai v${VERSION}"
+            exit 0
             ;;
         "--")
             shift
@@ -74,17 +91,5 @@ while [[ $# -gt 0 ]];do
             ;;
     esac
 done
-
-read_stdin(){
-    echo "reading from stdin..." >&2
-    local _buf=""
-    while IFS='' read _line; do
-        echo "$_line"
-    done
-}
-
-prompt(){
-    "$CLAI_DIR/endpoints.sh" "${@:-$(read_stdin)}"
-}
 
 prompt "$@" | post
