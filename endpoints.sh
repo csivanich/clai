@@ -10,6 +10,7 @@ if ! which pv &>/dev/null;then
     }
 fi
 
+# shellcheck disable=SC2155
 if [[ -z "${CLAI_DIR:-}" ]];then
     SOURCE=${BASH_SOURCE[0]}
     while [ -L "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
@@ -33,6 +34,7 @@ model(){
 }
 
 message(){
+    # template and render the string into jq which validates it
     jq . <<-EOL
         {
             "model": "$(model | json)",
@@ -41,7 +43,7 @@ message(){
                 {"role": "user", "content": "$@"}
             ],
             "stream": true,
-            "temperature": $(json <<< ${TEMPERATURE:-0.0})
+            "temperature": $(json <<< "${TEMPERATURE:-0.0}")
         }
 EOL
 }
@@ -83,7 +85,7 @@ stream(){
 }
 
 persona(){
-    PERSONAS="$(tr '+' ' ' <<< ${PERSONA:-default})"
+    PERSONAS="$(tr '+' ' ' <<< "${PERSONA:-default}")"
     echo "Personas: $PERSONAS" >&2
     (
         for p in ${PERSONAS};do
