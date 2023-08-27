@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="164.39mm"
+   height="75mm"
+   viewBox="0 0 164.39 75"
+   version="1.1"
+   id="svg10417"
+   inkscape:version="1.2.2 (b0a84865, 2022-12-01)"
+   sodipodi:docname="clai.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview10419"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.4237103"
+     inkscape:cx="396.85039"
+     inkscape:cy="218.09212"
+     inkscape:window-width="1728"
+     inkscape:window-height="1051"
+     inkscape:window-x="0"
+     inkscape:window-y="38"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs10414">
+    <linearGradient
+       id="linearGradient11385"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#2b1100;stop-opacity:1;"
+         offset="0"
+         id="stop11383" />
+    </linearGradient>
+  </defs>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Backgrounds"
+     style="display:none"
+     transform="translate(-9.8268854,-8.3663557)">
+    <rect
+       style="display:inline;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:3.19799;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0;stop-color:#000000"
+       id="rect13300"
+       width="215.39139"
+       height="98.984093"
+       x="-4.5451875"
+       y="-3.5351458" />
+    <rect
+       style="display:inline;fill:#7d7d7d;fill-opacity:1;stroke:#000000;stroke-width:3.19799;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0;stop-color:#000000"
+       id="rect13300-8"
+       width="215.39139"
+       height="98.984093"
+       x="-4.5451875"
+       y="-3.5351458" />
+    <rect
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:3.19799;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0;stop-color:#000000"
+       id="rect13300-6"
+       width="215.39139"
+       height="98.984093"
+       x="-3.8311727"
+       y="-4.1905546" />
+  </g>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-9.8268854,-8.3663557)">
+    <rect
+       style="fill:#c3c3c3;fill-opacity:1;stroke:#000000;stroke-width:2.83138;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0;stop-color:#000000"
+       id="rect13229"
+       width="72.168617"
+       height="72.168617"
+       x="11.242575"
+       y="9.7820454"
+       inkscape:export-filename="clai.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="fill:#ad5114;fill-opacity:1;stroke-width:3.70092;stroke-linecap:round;stroke-linejoin:round;stop-color:#000000"
+       id="rect10538"
+       width="70"
+       height="70"
+       x="12.326883"
+       y="10.866354"
+       inkscape:export-filename="clai.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="fill:#804015;fill-opacity:1;stroke-width:3.82951;stroke-linecap:round;stroke-linejoin:round;stop-color:#000000"
+       id="rect10904"
+       width="60"
+       height="60"
+       x="17.326883"
+       y="15.866352" />
+    <rect
+       style="mix-blend-mode:normal;fill:#24160b;fill-opacity:1;stroke:#000000;stroke-width:3.80875;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0;stop-color:#000000"
+       id="rect10958"
+       width="46.191254"
+       height="46.19125"
+       x="24.231256"
+       y="22.770729" />
+    <path
+       style="mix-blend-mode:color;fill:#a6a6a6;fill-opacity:1;stroke:#000000;stroke-width:3.15984;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0;stop-color:#000000"
+       d="M 12.317722,80.870648 24.42433,68.923981 70.04156,68.584149 82.34399,80.861658 Z"
+       id="path11585"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       style="mix-blend-mode:multiply;fill:#b2b2b2;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0;paint-order:markers stroke fill;stop-color:#000000"
+       d="m 12.324022,10.865778 11.908036,11.90566 46.189399,7e-5 11.906669,-11.907702 z"
+       id="path13409"
+       sodipodi:nodetypes="ccccc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.5569px;font-family:'Mukta Mahee';-inkscape-font-specification:'Mukta Mahee, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#c3c3c3;fill-opacity:1;stroke:none;stroke-width:1.27948;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
+       x="95.488541"
+       y="62.736778"
+       id="text13125"><tspan
+         sodipodi:role="line"
+         id="tspan19139"
+         x="95.488541"
+         y="62.736778">Clai</tspan></text>
+  </g>
+</svg>
