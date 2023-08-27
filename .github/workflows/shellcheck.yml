@@ -6,6 +6,8 @@ jobs:
   shellcheck:
     name: Shellcheck
     runs-on: ubuntu-latest
+    with:
+      version: v0.8.0
     steps:
       - uses: actions/checkout@v3
       - name: Run ShellCheck
