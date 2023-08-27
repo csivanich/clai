@@ -1,4 +1,4 @@
-![Clai Header](./assets/clai.svg)
+![Clai Header](./assets/clai.png)
 
 # clai - a CLI for AI endpoints
 
