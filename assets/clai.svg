@@ -2,13 +2,16 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="164.39mm"
+   width="201.403mm"
    height="75mm"
-   viewBox="0 0 164.39 75"
+   viewBox="0 0 201.403 75"
    version="1.1"
    id="svg10417"
    inkscape:version="1.2.2 (b0a84865, 2022-12-01)"
    sodipodi:docname="clai.svg"
+   inkscape:export-filename="clai.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -24,9 +27,9 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="1.4237103"
-     inkscape:cx="396.85039"
-     inkscape:cy="218.09212"
+     inkscape:zoom="1.3058102"
+     inkscape:cx="413.91927"
+     inkscape:cy="214.04336"
      inkscape:window-width="1728"
      inkscape:window-height="1051"
      inkscape:window-x="0"
@@ -85,8 +88,8 @@
        x="11.242575"
        y="9.7820454"
        inkscape:export-filename="clai.png"
-       inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96" />
+       inkscape:export-xdpi="110.79438"
+       inkscape:export-ydpi="110.79438" />
     <rect
        style="fill:#ad5114;fill-opacity:1;stroke-width:3.70092;stroke-linecap:round;stroke-linejoin:round;stop-color:#000000"
        id="rect10538"
@@ -123,13 +126,13 @@
        sodipodi:nodetypes="ccccc" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.5569px;font-family:'Mukta Mahee';-inkscape-font-specification:'Mukta Mahee, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#c3c3c3;fill-opacity:1;stroke:none;stroke-width:1.27948;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.5569px;font-family:'Russo One';-inkscape-font-specification:'Russo One, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#c3c3c3;fill-opacity:1;stroke:none;stroke-width:1.27948;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
        x="95.488541"
-       y="62.736778"
+       y="64.611267"
        id="text13125"><tspan
          sodipodi:role="line"
-         id="tspan19139"
+         id="tspan20144"
          x="95.488541"
-         y="62.736778">Clai</tspan></text>
+         y="64.611267">Clai</tspan></text>
   </g>
 </svg>
