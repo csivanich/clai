@@ -1,9 +1,9 @@
 #!/usr/bin/env
 
 TMP_DIR="/tmp"
-FILE="${TMP_DIR}/clai_output.md"
+FILE="${TMP_DIR}/clai_output_$(date +%s).md"
 
-tee "$FILE"
+touch "$FILE"
 
 # Determine the operating system
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
@@ -17,8 +17,7 @@ elif [[ "$OSTYPE" == "cygwin" ]]; then
  start "$FILE"
 else
  echo "Unsupported operating system"
- rc=1
+ exit 1
 fi
-rc=${rc:-$?}
 
-exit $rc
+tee "$FILE"
