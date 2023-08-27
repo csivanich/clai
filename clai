@@ -39,6 +39,10 @@ while [[ $# -gt 0 ]];do
             POST=markdown
             export PERSONA=markdown
             ;;
+        "--trace")
+            shift
+            export TRACE=1
+            ;;
         "--post")
             shift
             POST="$1"
@@ -79,4 +83,8 @@ read_stdin(){
     done
 }
 
-$CLAI_DIR/endpoints.sh "${@:-$(read_stdin)}" | post
+prompt(){
+    "$CLAI_DIR/endpoints.sh" "${@:-$(read_stdin)}"
+}
+
+prompt "$@" | post

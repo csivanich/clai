@@ -47,13 +47,39 @@ EOL
 }
 
 query(){
+    stream "$@" \
+        | tee "$HOME/.cache/.endpoints_last.json" \
+        | trace \
+        | "$CLAI_DIR/handle_stream.py" \
+        | tee "$HOME/.cache/.endpoints_last"
+}
+
+affirmative(){
+    case "$1" in
+        "1"|[Yy]es|[Tt]rue)
+            return 0
+            ;;
+        *)
+            return 1
+            ;;
+    esac
+}
+
+trace(){
+    if affirmative "${TRACE:-}"; then
+        trace_file="endpoints_trace_$(date +%s).txt"
+        "$CLAI_DIR/record.py" "$trace_file"
+        echo "Trace: $trace_file" >&2
+    else
+        cat -
+    fi
+}
+
+stream(){
     curl -NfSs "$OPENAI_API_BASE/chat/completions" \
         -H "Content-Type: application/json" \
         -H "Authorization: Bearer $OPENAI_API_KEY" \
-        -d "$(message $@)" \
-    | tee $HOME/.cache/.endpoints_last.json \
-    | $CLAI_DIR/handle_stream.py \
-    | tee $HOME/.cache/.endpoints_last
+        -d "$(message "$@")"
 }
 
 persona(){
