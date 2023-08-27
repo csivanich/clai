@@ -79,4 +79,4 @@ read_stdin(){
     done
 }
 
-./endpoints.sh "${@:-$(read_stdin)}" | post
+$CLAI_DIR/endpoints.sh "${@:-$(read_stdin)}" | post
