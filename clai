@@ -70,6 +70,11 @@ while [[ $# -gt 0 ]];do
             export PERSONA="$1"
             shift
             ;;
+        "--seed")
+            shift
+            export SEED="$1"
+            shift
+            ;;
         "--python")
             shift
             POST=python
