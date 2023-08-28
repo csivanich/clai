@@ -1,12 +1,15 @@
-on: "push"
 name: "Trigger: Black"
+
+on: [push, pull_request]
+
 permissions: {}
 
 jobs:
-  black:
-    name: black
+  lint:
+    name: Black
+    runs-on: ubuntu-latest
     steps:
-      - uses: "lgeiger/black-action@master"
-        args: ". --check"
+      - uses: actions/checkout@v3
+      - uses: psf/black@stable
         with:
           version: 19.10b0
