@@ -146,7 +146,7 @@ default:
 ```
 $ clai -- give me a once sentence answer on what you think about water
 Personas: default
-Model: meta-llama/Llama-2-70b-chat-hf
+Model: default
 Water is a vital and essential component of life, crucial for sustenance, hydration, and maintaining the health and well-being of all living organisms, and its conservation and responsible management are critical for the long-term sustainability of our planet.
 ```
 
@@ -154,7 +154,7 @@ robot:
 ```
 $ clai --persona robot -- give me a once sentence answer on what you think about water
 Personas: robot
-Model: meta-llama/Llama-2-70b-chat-hf
+Model: default
 Water? *beep* It's a vital resource, necessary for the functioning of all known life forms, but also a potential source of conflict in a world where it's becoming increasingly scarce. *beep*
 ```
 
@@ -162,7 +162,7 @@ robot+sarcastic
 ```
 $ clai --persona robot+sarcastic -- give me a once sentence answer on what you think about water
 Personas: robot sarcastic
-Model: meta-llama/Llama-2-70b-chat-hf
+Model: default
 Water? Ha! That stuff's for rusting, not for drinking. *beep*
 ```
 
