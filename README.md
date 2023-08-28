@@ -6,6 +6,13 @@ clai (pronounced `/ˈkleɪ/` like 'clay') is a CLI for AI endpoints designed to 
 
 It is designed to be compatible with various AI Endpoints providers like OpenAI and Anyscale.
 
+```
+$ clai -- summarize the history of the open-source movement in a couple sentences
+Model: default
+Personas: default
+The open-source movement began in the 1980s as a response to the restrictive nature of proprietary software. The movement advocated for the free distribution and collaboration on software source code, with the goal of creating better, more reliable software that could be used and modified by anyone.
+```
+
 # :wrench: Install
 
 There are two main methods to run `clai`, with `clai` directly in your environment, or with the `clai_docker.sh` Docker image shim.
