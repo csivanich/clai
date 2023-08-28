@@ -99,8 +99,8 @@ For running any method:
 |------|-------------|---------|
 | `OPENAI_API_BASE` | *REQUIRED* OpenAI-compatible endpoints provider base URL | _unset_ |
 | `OPENAI_API_KEY` | *REQUIRED* OpenAI-compatible endpoints API token | _unset_ |
-| `DEBUG` | Set with non-zero length value to output more information, including `set +x` | _unset_ |
-| `TRACE` | Set with `"1"\|[Tt]rue\|[Yy]es` to record a response trace| _unset_ |
+| `DEBUG` | Enable debugging with `"1"\|[Tt]rue\|[Yy]es` | _unset_ |
+| `TRACE` | Enable response tracing with `"1"\|[Tt]rue\|[Yy]es` | _unset_ |
 
 It's recommended to use `~/.bashrc` or similar methods to setup `OPENAI_API_*`
 
