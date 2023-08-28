@@ -1,8 +1,7 @@
 FROM alpine as base
-RUN apk add bash pv curl jq && mkdir ~/.cache
+RUN apk add python3 bash pv curl jq && mkdir ~/.cache
 COPY persona/ persona/
 COPY models/ models/
 COPY post/ post/
-COPY clai clai
-COPY endpoints.sh endpoints.sh
+COPY clai endpoints.sh ./handle_stream.py ./record.py .
 ENTRYPOINT ["./clai"]
