@@ -43,7 +43,7 @@ message(){
                 {"role": "user", "content": "$@"}
             ],
             "stream": true,
-            "temperature": $(json <<< "${TEMPERATURE:-0.0}")
+            "temperature": $(json <<< "${TEMPERATURE:-0.7}")
         }
 EOL
 }
