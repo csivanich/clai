@@ -1,6 +1,17 @@
 #!/usr/bin/env bash
 
-[[ -n "$DEBUG" ]] && set -x
+affirmative(){
+    case "$1" in
+        "1"|[Yy]es|[Tt]rue)
+            return 0
+            ;;
+        *)
+            return 1
+            ;;
+    esac
+}
+
+affirmative "${DEBUG:-}" && set -x
 
 set -Eeuo pipefail
 
@@ -55,17 +66,6 @@ query(){
         | trace \
         | "$CLAI_DIR/handle_stream.py" \
         | tee "$HOME/.cache/.endpoints_last"
-}
-
-affirmative(){
-    case "$1" in
-        "1"|[Yy]es|[Tt]rue)
-            return 0
-            ;;
-        *)
-            return 1
-            ;;
-    esac
 }
 
 trace(){
