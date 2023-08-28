@@ -49,7 +49,7 @@ sudo apk add python bash curl jq git
 
 </details>
 
-## Add to `$PATH`
+### Add to `$PATH`
 
 _This assumes `/usr/local/bin` is in `$PATH`_
 
@@ -74,7 +74,7 @@ git
 docker
 ```
 
-## Add to `$PATH`
+### Add to `$PATH`
 
 _This assumes `/usr/local/bin` is in `$PATH`_
 
@@ -88,6 +88,8 @@ You should now be able to run `clai`
 ```sh
 clai --version
 ```
+
+# :runner: Run
 
 ## Environment
 
@@ -109,7 +111,7 @@ export OPENAI_API_BASE="https://api.endpoints.anyscale.com/v1"
 export OPENAI_API_KEY="esecret_XXXX"
 ```
 
-# :runner: Run
+## Usage
 
 ```sh
 $ clai --help
