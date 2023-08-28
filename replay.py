@@ -20,8 +20,7 @@ for line in lines:
         first_line = False
         timestamp = float(parts[0])
 
-    diff = (float(parts[0]) - timestamp)
-    time.sleep(diff/SLOWDOWN)
-    print(" ".join(parts[1:]), end='', flush=True)
+    diff = float(parts[0]) - timestamp
+    time.sleep(diff / SLOWDOWN)
+    print(" ".join(parts[1:]), end="", flush=True)
     timestamp = float(parts[0])
-

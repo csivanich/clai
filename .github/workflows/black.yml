@@ -1,0 +1,12 @@
+on: "push"
+name: "Trigger: Black"
+permissions: {}
+
+jobs:
+  black:
+    name: black
+    steps:
+      - uses: "lgeiger/black-action@master"
+        args: ". --check"
+        with:
+          version: 19.10b0
