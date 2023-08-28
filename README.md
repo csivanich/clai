@@ -8,13 +8,25 @@ It is designed to be compatible with various AI Endpoints providers like OpenAI 
 
 # :warning: Requirements
 
-## Binaries
+## Base Dependencies
 
 ```
 python (3.X)
 bash
 curl
 jq
+```
+
+## Development
+
+```
+pip (for pre-commit)
+docker (for pre-commit/shellcheck)
+```
+
+Pre-commit hooks can be installed with
+```sh
+./pre-commit.sh
 ```
 
 ## Environment
