@@ -3,7 +3,12 @@
 import sys
 import time
 
-lines = sys.stdin.readlines()
+args = sys.argv[1:]
+if args:
+    with open(args[0]) as f:
+        lines = f.readlines()
+else:
+    lines = sys.stdin.readlines()
 
 first_line = lines[0]
 parts = first_line.split(" ")
