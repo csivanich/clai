@@ -15,12 +15,6 @@ affirmative "${DEBUG:-}" && set -x
 
 set -Eeuo pipefail
 
-if ! which pv &>/dev/null;then
-    pv(){
-        cat
-    }
-fi
-
 # shellcheck disable=SC2155
 if [[ -z "${CLAI_DIR:-}" ]];then
     SOURCE=${BASH_SOURCE[0]}
@@ -33,6 +27,14 @@ if [[ -z "${CLAI_DIR:-}" ]];then
 fi
 
 MODELS_DIR="${MODELS_DIR:-${CLAI_DIR}/models}"
+
+CURL_CMD="${CURL_CMD:-$(command -v curl)}"
+
+curl(){
+    CURL_OPTS=""
+    affirmative "${DEBUG:-}" && CURL_OPTS="-v"
+    $CURL_CMD $CURL_OPTS -NfSs "$@"
+}
 
 json(){
     jq -Rrs .
@@ -51,7 +53,7 @@ message(){
             "model": "$(model | json)",
             "messages": [
                 {"role": "system", "content": "$(persona | json)"},
-                {"role": "user", "content": "$@"}
+                {"role": "user", "content": "$(json <<< "$@")"}
             ],
             "stream": true,
             "temperature": $(json <<< "${TEMPERATURE:-0.7}"),
@@ -79,7 +81,7 @@ trace(){
 }
 
 stream(){
-    curl -NfSs "$OPENAI_API_BASE/chat/completions" \
+    curl "$OPENAI_API_BASE/chat/completions" \
         -H "Content-Type: application/json" \
         -H "Authorization: Bearer $OPENAI_API_KEY" \
         -d "$(message "$@")"
